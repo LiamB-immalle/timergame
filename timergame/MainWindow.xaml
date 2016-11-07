@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:timergame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="1000"
+        WindowState="Maximized">
     <Grid>
-        
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" RadiusY="11.5" RadiusX="11.5" Stroke="Black" Width="500" Margin="246,34,0,0" Height="500" VerticalAlignment="Top"/>
+        <Rectangle Name="vuller" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="50" Stroke="Black" VerticalAlignment="Center" Width="50" RadiusY="11.5" RadiusX="11.5" RenderTransformOrigin="0,0"/>
+        <Button x:Name="start" Content="Start" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="131" Height="48" Click="start_Click"/>
+        <Button x:Name="tinier" Content="Make it tinier" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="131" Height="78" Click="tinier_Click"/>
+        <TextBlock x:Name="textBlock" Margin="0,349,761,50" TextWrapping="Wrap"><Run Text="Explanation:"/><LineBreak/><Run Text="&#x9;"/><Run Text="-"/><Run Text=" click the startbutton"/><LineBreak/><Run Text="&#x9;- "/><Run Text="a timer will start expanding the inner rectangle"/><LineBreak/><Run Text="&#x9;- click the second &#x9;button to keep the inner rectangle inside the"/><Run Text=" borders"/></TextBlock>
+
+
     </Grid>
 </Window>
