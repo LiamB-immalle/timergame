@@ -19,22 +19,36 @@ namespace timergame
 
     public partial class MainWindow : Window
     {
+        int height = 50;
+        int width = 50;
+
         private DispatcherTimer spawntimer = new DispatcherTimer();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            spawntimer.Interval = TimeSpan.FromMilliseconds(200);
-            //spawntimer.Tick += Spawntimer_Tick;
+            spawntimer.Interval = TimeSpan.FromMilliseconds(5000);
+            spawntimer.Tick += Spawntimer_Tick;
         }
-        
 
-        private void Spawntimer_tick()
+        private void Spawntimer_Tick(object sender, EventArgs e)
         {
-            vuller.Height = +10;
-            vuller.Width = +10;
-            
+
+            vullerheight();
+            vullerwidth();
+        }
+
+        private int vullerheight()
+        {
+            vuller.Height = height + 10;
+            return height;
+        }
+
+        private int vullerwidth()
+        {
+            vuller.Width = width + 10;
+            return width;
         }
 
         private void start_Click(object sender, RoutedEventArgs e)
@@ -47,5 +61,6 @@ namespace timergame
             vuller.Height = -5;
             vuller.Width = -5;
         }
+        
     }
 }
